@@ -48,6 +48,7 @@ of two premises and a conclusion.
 %doc %{_texmfdistdir}/doc/latex/syllogism/README
 %doc %{_texmfdistdir}/doc/latex/syllogism/syllogism.pdf
 %doc %{_texmfdistdir}/doc/latex/syllogism/syllogism.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +59,5 @@ of two premises and a conclusion.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
