@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/syllogism
-# catalog-date 2008-10-28 11:39:06 +0100
-# catalog-license lppl
-# catalog-version 1.2
 Name:		texlive-syllogism
-Version:	1.2
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Typeset syllogisms in LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/syllogism
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/syllogism.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/syllogism.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/syllogism.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/syllogism.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ typesetting syllogisms and syllogistic-like arguments, composed
 of two premises and a conclusion.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,24 +36,10 @@ of two premises and a conclusion.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
-+ Revision: 756374
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
-+ Revision: 719623
-- texlive-syllogism
-- texlive-syllogism
-- texlive-syllogism
-- texlive-syllogism
-
