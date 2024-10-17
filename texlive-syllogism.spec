@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Typeset syllogisms in LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/syllogism
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/syllogism
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/syllogism.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/syllogism.doc.r%{version}.tar.xz
